@@ -1,0 +1,29 @@
+{
+    "id": "62461d1ae9d255ab42a43b8f",
+    "name": "SendMonitoringTrigger",
+    "type": "DATABASE",
+    "config": {
+        "operation_types": [
+            "INSERT"
+        ],
+        "database": "monitoring",
+        "collection": "metrics",
+        "service_name": "mongodb-atlas",
+        "match": {},
+        "project": {},
+        "full_document": true,
+        "full_document_before_change": false,
+        "unordered": false,
+        "skip_catchup_events": false
+    },
+    "disabled": true,
+    "event_processors": {
+        "AWS_EVENTBRIDGE": {
+            "config": {
+                "account_id": "979559056307",
+                "extended_json_enabled": false,
+                "region": "eu-west-1"
+            }
+        }
+    }
+}

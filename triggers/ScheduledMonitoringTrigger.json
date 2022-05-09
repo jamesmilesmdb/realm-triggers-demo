@@ -1,0 +1,17 @@
+{
+    "id": "62461c70dde6452fec383d1a",
+    "name": "ScheduledMonitoringTrigger",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "*/5 * * * *",
+        "skip_catchup_events": false
+    },
+    "disabled": true,
+    "event_processors": {
+        "FUNCTION": {
+            "config": {
+                "function_name": "QueryMetricsApi"
+            }
+        }
+    }
+}
